@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tpicy.HomeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/mtHomeNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_200"
+            android:backgroundTint="@color/yellow"
+            app:menu="@menu/notification"
+            app:title="Tpicy"
+            app:titleTextColor="@color/black"
+            app:titleTextAppearance="@style/TextAppearance.BharatPickle.TitleLarge"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+        <!--<fragment
+            android:id="@+id/frCart"
+            android:name="com.tpicy.HomeFragment"
+            android:layout_width="match_parent"
+            tools:layout="@layout/fragment_cart"
+            android:layout_height="match_parent" />-->
+
+    </androidx.fragment.app.FragmentContainerView>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        app:itemIconSize="20dp"
+        app:labelVisibilityMode="labeled"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@color/yellow"/>
+</LinearLayout>

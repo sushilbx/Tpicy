@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/ivImageCartRow"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/picklee"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvNameCartRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="50dp"
+            android:text="Chittin mix pickle"
+            android:textAppearance="@style/TextAppearance.BharatPickle.TitleSmall"
+            app:layout_constraintStart_toEndOf="@id/ivImageCartRow"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvweightCartRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="250 g"
+            android:textAppearance="@style/TextAppearance.BharatPickle.LabelSmall"
+            app:layout_constraintStart_toEndOf="@id/ivImageCartRow"
+            app:layout_constraintTop_toBottomOf="@id/tvNameCartRow" />
+        <TextView
+            android:id="@+id/tvCartRowQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Qty : "
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.BharatPickle.LabelSmall"
+            app:layout_constraintStart_toEndOf="@id/ivImageCartRow"
+            app:layout_constraintTop_toBottomOf="@id/tvweightCartRow" />
+        <TextView
+            android:id="@+id/tvCartRowQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="0"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.BharatPickle.LabelSmall"
+            app:layout_constraintStart_toEndOf="@id/tvCartRowQuantity"
+            app:layout_constraintTop_toBottomOf="@id/tvweightCartRow" />
+        <TextView
+            android:id="@+id/tvPriceCartRupeeRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="₹"
+            android:textAppearance="@style/TextAppearance.BharatPickle.LabelMedium"
+            app:layout_constraintStart_toEndOf="@id/ivImageCartRow"
+            app:layout_constraintTop_toBottomOf="@id/tvCartRowQty" />
+
+
+        <TextView
+            android:id="@+id/tvPriceCartRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="3dp"
+            android:text="500.00"
+            android:textAppearance="@style/TextAppearance.BharatPickle.LabelMedium"
+            app:layout_constraintStart_toEndOf="@id/tvPriceCartRupeeRow"
+            app:layout_constraintTop_toBottomOf="@id/tvCartRowQty" />
+
+
+        <TextView
+            android:id="@+id/tvDiscountPriceCartRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:foreground="@drawable/strikethrough"
+            android:text="₹ 500.00"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/TextAppearance.BharatPickle.LabelMedium"
+            android:textColor="#B00000"
+            app:layout_constraintStart_toEndOf="@id/tvPriceCartRow"
+            app:layout_constraintTop_toBottomOf="@id/tvCartRowQty" />
+
+
+        <ImageView
+            android:id="@+id/ivDeleteCartRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+
+        <!-- <com.mcdev.quantitizerlibrary.HorizontalQuantitizer
+             android:id="@+id/h_q"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+        <ezy.ui.view.NumberStepper
+            android:id="@+id/nsCartQtyAddSubtract"
+            style="@style/NumberStepper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:nsButtonSize="28dp"
+            app:nsMaxValue="100"
+            app:nsMinValue="1"
+            app:nsStep="1"
+            app:nsValue="5" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="#36000000" />
+
+
+
+
+
+
+</FrameLayout>

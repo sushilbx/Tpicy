@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tpicy">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.tpicy.UpdateAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.tpicy.PrivacyPolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.tpicy.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.tpicy.OrderActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.tpicy.AddAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.tpicy.ReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.tpicy.AddressActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.tpicy.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.tpicy.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.tpicy.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.tpicy.ZoomActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.tpicy.DetailsProductActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.tpicy.ProductListActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.tpicy.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.tpicy.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.tpicy.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.tpicy.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tpicy.MainActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>
