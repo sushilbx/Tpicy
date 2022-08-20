@@ -3,8 +3,6 @@ package com.tpicy;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.bharatpickle.R;
-
 public class PrivacyPolicyActivity extends AppCompatActivity {
 
     @Override

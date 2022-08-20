@@ -175,4 +175,8 @@ public class SessionManager {
         editor.commit();
     }
 
+    public void getSessionData(String key){
+
+    }
+
 }

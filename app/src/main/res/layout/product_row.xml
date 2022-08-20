@@ -9,7 +9,6 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#332D41"
         android:layout_margin="5dp"
         app:cardCornerRadius="5dp">
 
@@ -71,7 +70,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text=" ₹ "
-                    android:textColor="@color/white"
                     android:textAppearance="@style/TextAppearance.BharatPickle.BodySmall" />
 
                 <TextView
@@ -80,7 +78,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="15dp"
                     android:text="500"
-                    android:textColor="@color/white"
                     android:textAppearance="@style/TextAppearance.BharatPickle.BodySmall"/>
 
                 <TextView

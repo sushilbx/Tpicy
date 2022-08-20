@@ -15,12 +15,24 @@
             android:id="@+id/mtHomeNotification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/purple_200"
-            android:backgroundTint="@color/yellow"
+            android:background="@color/md_theme_light_primary"
             app:menu="@menu/notification"
-            app:title="Tpicy"
-            app:titleTextColor="@color/black"
-            app:titleTextAppearance="@style/TextAppearance.BharatPickle.TitleLarge"/>
+            app:titleTextAppearance="@style/TextAppearance.BharatPickle.TitleMedium"
+            app:titleTextColor="@color/white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_dehaze_24"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tpicy"
+                android:textAppearance="@style/TextAppearance.BharatPickle.TitleMedium"
+                android:textColor="@color/white"
+                android:layout_marginLeft="30dp"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -47,7 +59,6 @@
         android:layout_height="70dp"
         app:itemIconSize="20dp"
         app:labelVisibilityMode="labeled"
-        app:itemTextColor="@color/black"
-        app:menu="@menu/bottom_nav_menu"
-        android:background="@color/yellow"/>
+        android:background="@color/white"
+        app:menu="@menu/bottom_nav_menu" />
 </LinearLayout>

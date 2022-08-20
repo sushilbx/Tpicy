@@ -69,6 +69,7 @@ public class Utils {
                 params.put("quantity", String.valueOf(quantity));
                 return params;
             }
+
         };
         stringRequest.setRetryPolicy(new DefaultRetryPolicy(30000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         MySingleton.myGetMySingleton(context).myAddToRequest(stringRequest);

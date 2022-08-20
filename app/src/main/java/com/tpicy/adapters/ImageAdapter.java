@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.tpicy.ItemListener;
-import com.bharatpickle.R;
+import com.tpicy.R;
 import com.tpicy.ZoomActivity;
 import com.tpicy.models.ImageModel;
 import com.bumptech.glide.Glide;

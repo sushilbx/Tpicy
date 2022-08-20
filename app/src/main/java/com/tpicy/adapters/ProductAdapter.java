@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.tpicy.DetailsProductActivity;
 import com.tpicy.ItemListener;
-import com.bharatpickle.R;
+import com.tpicy.R;
 import com.tpicy.models.ProductModel;
 import com.bumptech.glide.Glide;
 

@@ -21,7 +21,6 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.bharatpickle.R;
 import com.tpicy.adapters.CartAdapter;
 import com.tpicy.models.GetCartModel;
 import com.google.gson.Gson;
@@ -35,7 +34,6 @@ public class CartFragment extends Fragment implements ApiListener {
     RecyclerView recyclerView;
     SessionManager sessionManager;
     TextView tvCartItems,tvCartTotalPrice,tvCartAmount,tvCartTotalAmount,tvCartTotalItems,tvCartPlaceOrder;
-
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -70,7 +68,7 @@ public class CartFragment extends Fragment implements ApiListener {
             public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle bundle) {
                 boolean result = bundle.getBoolean("result");
                 if (result) {
-                    getcart();
+                    getCart();
                 }
             }
         });
@@ -81,6 +79,14 @@ public class CartFragment extends Fragment implements ApiListener {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cart, container, false);
         sessionManager = new SessionManager(getContext());
+
+        fromXml(view);
+        listener();
+        getCart();
+        return view;
+    }
+
+    private void fromXml(View view) {
         recyclerView = view.findViewById(R.id.recyclerCartlist);
         tvCartItems = view.findViewById(R.id.tvCartItems);
         tvCartTotalItems = view.findViewById(R.id.tvCartTotalItems);
@@ -88,8 +94,11 @@ public class CartFragment extends Fragment implements ApiListener {
         tvCartAmount = view.findViewById(R.id.tvCartAmount);
         tvCartTotalAmount = view.findViewById(R.id.tvCartTotalAmount);
         tvCartPlaceOrder=view.findViewById(R.id.tvCartPlaceOrder);
+    }
+
+    private void listener() {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-       // recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        // recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
         tvCartPlaceOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,13 +106,10 @@ public class CartFragment extends Fragment implements ApiListener {
                 startActivity(intent);
             }
         });
-
-        getcart();
-        return view;
     }
 
 
-    public void getcart() {
+    public void getCart() {
         Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -125,11 +131,7 @@ public class CartFragment extends Fragment implements ApiListener {
                     tvCartAmount.setText(cartList.data.sub_total);
                     tvCartTotalAmount.setText(cartList.data.sub_total);
                     tvCartTotalItems.setText(cartList.data.total_item);
-
-
                 }
-
-
             }
         };
 
@@ -139,7 +141,6 @@ public class CartFragment extends Fragment implements ApiListener {
                 error.printStackTrace();
             }
         };
-
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, responseListener, errorListener) {
             @Nullable
             @Override
@@ -157,7 +158,7 @@ public class CartFragment extends Fragment implements ApiListener {
 
     @Override
     public void onSuccess(String response) {
-        getcart();
+        getCart();
     }
 
     @Override

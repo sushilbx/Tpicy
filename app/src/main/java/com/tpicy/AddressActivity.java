@@ -1,5 +1,7 @@
 package com.tpicy;
 
+import static com.tpicy.Utils.URL;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,12 +19,12 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.bharatpickle.R;
-import com.tpicy.adapters.AddressAdapter;
-import com.tpicy.models.AddressModel;
-import com.tpicy.models.GetAddressModel;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.gson.Gson;
+import com.tpicy.adapters.AddressAdapter;
+import com.tpicy.databinding.ActivityAddressBinding;
+import com.tpicy.models.AddressModel;
+import com.tpicy.models.GetAddressModel;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -33,74 +35,53 @@ public class AddressActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     String url = "http://ottego.com/pickle/pickle/address_list";
     SessionManager sessionManager;
-    MaterialToolbar mtAddressBack;
-
-    TextView tvAddressName, tvAddressVill, tvAddressDistrict, tvAddressState, tvAddressPin, tvAddressMobile,tvAddressAddAddress;
+    ActivityAddressBinding b;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_address);
+        b = ActivityAddressBinding.inflate(getLayoutInflater());
+        View view = b.getRoot();
+        setContentView(view);
         sessionManager = new SessionManager(this);
-        tvAddressName = findViewById(R.id.tvAddressName);
-        tvAddressVill = findViewById(R.id.tvAddressVill);
-        tvAddressDistrict = findViewById(R.id.tvAddressDistrict);
-        tvAddressState = findViewById(R.id.tvAddressState);
-        tvAddressPin = findViewById(R.id.tvAddressPin);
-        mtAddressBack = findViewById(R.id.mtAddressBack);
-        tvAddressAddAddress = findViewById(R.id.tvAddressAddAddress);
-        tvAddressMobile = findViewById(R.id.tvAddressMobile);
         recyclerView = findViewById(R.id.rcViewAddress);
-
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mtAddressBack.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {onBackPressed();
-
-            }
-        });
-        tvAddressAddAddress.setOnClickListener(new View.OnClickListener() {
+        b.mtAddressBack.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AddressActivity.this,AddAddressActivity.class);
+                onBackPressed();
+            }
+        });
+        b.tvAddressAddAddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AddressActivity.this, AddAddressActivity.class);
                 startActivity(intent);
             }
         });
         getAddress();
-
     }
-
-
-    public void getAddress (){
+    public void getAddress() {
         Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.e("Response", response);
                 Gson gson = new Gson();
-                GetAddressModel addressList = gson.fromJson(response, GetAddressModel.class);
-                if (addressList.status) {
-
-                    AddressAdapter adapter = new AddressAdapter(AddressActivity.this, addressList.data, new ItemListener() {
-                        @Override
-                        public void onSelect(String id) {
-
-                            Intent myIntent = new Intent(AddressActivity.this, DetailsProductActivity.class);
-                            startActivity(myIntent);
-                        }
-                    });
-                    recyclerView.setAdapter(adapter);
-
+                GetAddressModel address = gson.fromJson(response, GetAddressModel.class);
+                if (address.status) {
+                    AddressAdapter adapter = new AddressAdapter(AddressModel.ADDRESS_COMPARATOR);
+                    b.rcViewAddress.setAdapter(adapter);
+                    adapter.submitList(address.data);
                 }
             }
         };
         Response.ErrorListener errorListener = new Response.ErrorListener() {
             @Override
-            public void onErrorResponse(VolleyError error) {error.printStackTrace();}
-
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
         };
-
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, responseListener, errorListener) {
             @Nullable
             @Override

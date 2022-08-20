@@ -8,8 +8,6 @@ import androidx.fragment.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-
-import com.bharatpickle.R;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -38,6 +36,10 @@ public class HomeActivity extends AppCompatActivity {
                     }
                     case R.id.home: {
                         selectedFragment = new HomeFragment();
+                        break;
+                    }
+                    case R.id.search: {
+                        selectedFragment = new SearchFragment();
                         break;
                     }
                     case R.id.cart: {

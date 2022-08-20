@@ -18,7 +18,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.bharatpickle.R;
+import com.tpicy.R;
 import com.tpicy.models.GetProfileModel;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.google.gson.Gson;
@@ -34,7 +34,7 @@ public class AccountFragment extends Fragment {
     private String mParam2;
     TextView logOut, tvCartAccount, tvAccountName, tvAccountMobile, tvAccountGmail;
     SessionManager sessionManager;
-    TextView tvAccountAddress, tvAccountReview, tvAccountPrivacyPolicy;
+    TextView tvAccountAddress, tvAccountReview, tvAccountPrivacyPolicy,tvAccountHelp;
     ShapeableImageView ivAccountImage;
 
 
@@ -74,6 +74,7 @@ public class AccountFragment extends Fragment {
         tvAccountGmail = view.findViewById(R.id.tvAccountGmail);
         ivAccountImage = view.findViewById(R.id.ivAccountImage);
         tvAccountAddress = view.findViewById(R.id.tvAccountAddress);
+        tvAccountHelp = view.findViewById(R.id.tvAccountHelp);
         tvAccountPrivacyPolicy = view.findViewById(R.id.tvAccountPrivacyPolicy);
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,6 +115,14 @@ public class AccountFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), PrivacyPolicyActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        tvAccountHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), GmailLoginActivity.class);
                 startActivity(intent);
 
             }

@@ -8,9 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
-
-import com.bharatpickle.R;
-
 public class CategoryFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";

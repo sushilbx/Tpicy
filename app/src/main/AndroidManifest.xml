@@ -13,55 +13,64 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.tpicy.UpdateAddressActivity"
+            android:name=".OrderListActivity"
             android:exported="false" />
         <activity
-            android:name="com.tpicy.PrivacyPolicyActivity"
+            android:name=".GmailProfileActivity"
             android:exported="false" />
         <activity
-            android:name="com.tpicy.PaymentActivity"
+            android:name=".GmailLoginActivity"
             android:exported="false" />
         <activity
-            android:name="com.tpicy.OrderActivity"
+            android:name=".UpdateAddressActivity"
             android:exported="false" />
         <activity
-            android:name="com.tpicy.AddAddressActivity"
+            android:name=".PrivacyPolicyActivity"
             android:exported="false" />
         <activity
-            android:name="com.tpicy.ReviewActivity"
+            android:name=".PaymentActivity"
             android:exported="false" />
         <activity
-            android:name="com.tpicy.AddressActivity"
+            android:name=".OrderActivity"
             android:exported="false" />
         <activity
-            android:name="com.tpicy.ProfileActivity"
+            android:name=".AddAddressActivity"
             android:exported="false" />
         <activity
-            android:name="com.tpicy.NotificationActivity"
+            android:name=".ReviewActivity"
             android:exported="false" />
         <activity
-            android:name="com.tpicy.CartActivity"
+            android:name=".AddressActivity"
             android:exported="false" />
         <activity
-            android:name="com.tpicy.ZoomActivity"
+            android:name=".ProfileActivity"
             android:exported="false" />
         <activity
-            android:name="com.tpicy.DetailsProductActivity"
+            android:name=".NotificationActivity"
             android:exported="false" />
         <activity
-            android:name="com.tpicy.ProductListActivity"
+            android:name=".CartActivity"
             android:exported="false" />
         <activity
-            android:name="com.tpicy.HomeActivity"
+            android:name=".ZoomActivity"
             android:exported="false" />
         <activity
-            android:name="com.tpicy.SignupActivity"
+            android:name=".DetailsProductActivity"
             android:exported="false" />
         <activity
-            android:name="com.tpicy.LoginActivity"
+            android:name=".ProductListActivity"
             android:exported="false" />
         <activity
-            android:name="com.tpicy.SplashActivity"
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -70,7 +79,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.tpicy.MainActivity"
+            android:name=".MainActivity"
             android:exported="false" />
     </application>
 

@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.bharatpickle.R;
 import com.google.android.material.appbar.MaterialToolbar;
 
 public class CartActivity extends AppCompatActivity {

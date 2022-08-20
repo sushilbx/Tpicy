@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.tpicy.ApiListener;
-import com.bharatpickle.R;
+import com.tpicy.R;
 import com.tpicy.RemoveCartFragment;
 import com.tpicy.Utils;
 import com.tpicy.models.ProductModel;

@@ -8,8 +8,6 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.bharatpickle.R;
-
 public class SplashActivity extends AppCompatActivity {
     Context context;
     SessionManager sessionManager;

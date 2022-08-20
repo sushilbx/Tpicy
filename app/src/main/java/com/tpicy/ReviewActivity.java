@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RatingBar;
 import android.widget.Toast;
-
-import com.bharatpickle.R;
 import com.google.android.material.appbar.MaterialToolbar;
 
 public class ReviewActivity extends AppCompatActivity {

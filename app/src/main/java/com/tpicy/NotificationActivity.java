@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-
-import com.bharatpickle.R;
 import com.google.android.material.appbar.MaterialToolbar;
 
 public class NotificationActivity extends AppCompatActivity {

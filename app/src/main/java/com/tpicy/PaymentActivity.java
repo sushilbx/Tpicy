@@ -9,8 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.bharatpickle.R;
 import com.razorpay.Checkout;
 import com.razorpay.PaymentResultListener;
 import org.json.JSONObject;

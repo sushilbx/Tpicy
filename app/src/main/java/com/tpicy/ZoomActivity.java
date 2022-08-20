@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.bharatpickle.R;
 import com.tpicy.models.ImageModel;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

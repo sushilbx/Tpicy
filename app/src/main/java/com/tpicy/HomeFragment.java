@@ -18,7 +18,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.bharatpickle.R;
+import com.tpicy.R;
 import com.tpicy.adapters.ProductAdapter;
 import com.tpicy.models.GetProductModel;
 import com.tpicy.models.ProductModel;
