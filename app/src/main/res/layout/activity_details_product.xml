@@ -18,7 +18,8 @@
             app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
             app:title="Product Name"
             android:background="@color/md_theme_light_primary"
-           app:titleTextAppearance="@style/TextAppearance.BharatPickle.TitleLarge"/>
+            app:titleTextColor="@color/white"
+           app:titleTextAppearance="@style/TextAppearance.BharatPickle.TitleMedium"/>
     </com.google.android.material.appbar.AppBarLayout>
 
 

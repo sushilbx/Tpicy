@@ -4,24 +4,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context="com.tpicy.ProductListActivity">
+    tools:context=".OrderHistoryActivity">
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/mtProductListBack"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="Pickle Aur Chutney"
         android:background="@color/md_theme_light_primary"
         app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:title="Order History"
         app:titleTextAppearance="@style/TextAppearance.BharatPickle.TitleMedium"/>
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerProductList"
-        android:layout_width="match_parent"
-        tools:listitem="@layout/product_row"
-        android:layout_height="match_parent"/>
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvOrderHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
 </LinearLayout>

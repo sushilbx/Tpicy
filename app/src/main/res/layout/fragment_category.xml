@@ -11,52 +11,98 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/ivCategoryImage"
-            android:layout_width="260dp"
-            android:layout_height="250dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/pickle"
-            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.circle" />
-
         <TextView
-            android:id="@+id/tvCategoryPickle"
+            android:id="@+id/pickle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:text="Pickle"
             android:textAppearance="@style/TextAppearance.BharatPickle.TitleLarge"
-            android:textColor="@color/black" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/ivCategoryImageChatni"
-            android:layout_width="200dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:scaleType="centerCrop"
-            android:src="@drawable/chatnies"
-            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.circle" />
-
+            android:textColor="@color/black"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_theme_light_primary"/>
         <TextView
-            android:id="@+id/tvCategoryChatni"
+            android:id="@+id/chutney"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Chatni"
+            android:text="Chutney"
             android:textAppearance="@style/TextAppearance.BharatPickle.TitleLarge"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_theme_light_primary"/>
+        <TextView
+            android:id="@+id/papd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Papad"
+            android:textAppearance="@style/TextAppearance.BharatPickle.TitleLarge"
+            android:textColor="@color/black"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_theme_light_primary"/>
+        <TextView
+            android:id="@+id/murbba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aawle ka murbba"
+            android:textAppearance="@style/TextAppearance.BharatPickle.TitleLarge"
+            android:textColor="@color/black"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_theme_light_primary"/>
+        <TextView
+            android:id="@+id/chips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chips"
+            android:textAppearance="@style/TextAppearance.BharatPickle.TitleLarge"
+            android:textColor="@color/black"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_theme_light_primary"/>
+        <TextView
+            android:id="@+id/hlwa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aawle Ka Hlwa"
+            android:textAppearance="@style/TextAppearance.BharatPickle.TitleLarge"
+            android:textColor="@color/black"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_theme_light_primary"/>
+
+
+
+
 
     </LinearLayout>
+
+
 
 
 </LinearLayout>

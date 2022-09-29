@@ -49,9 +49,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ProductModel model = arrayCart.get(position);
-        Glide.with(context)
-                .load(model.image)
-                .into(holder.ivImageCartRow);
+        Glide.with(context).load(model.image).into(holder.ivImageCartRow);
         holder.tvCartProductName.setText(model.name);
         holder.tvCartProductPrice.setText(model.price);
         holder.nsCartQtyAddSubtract.setValue(Integer.parseInt(model.quantity));

@@ -3,17 +3,24 @@ package com.tpicy;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class HomeActivity extends AppCompatActivity {
     MaterialToolbar mtHomeNotification;
+    ImageView ivHomeSetting;
+    DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +28,24 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         BottomNavigationView bottom_navigation = findViewById(R.id.bottom_navigation);
         mtHomeNotification= findViewById(R.id.mtHomeNotification);
+
+        drawerLayout = findViewById(R.id.drawerLayout);
+
+        mtHomeNotification.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!drawerLayout.isOpen()) {
+                    drawerLayout.openDrawer(GravityCompat.START);
+                } else {
+                    drawerLayout.closeDrawers();
+                }
+            }
+        });
+
+
+//                Fragment fragment = new SideViewFragment();
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerSide,fragment).commit();
+
 
 
 

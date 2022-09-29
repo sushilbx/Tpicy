@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/md_theme_light_primary"
-        app:titleTextAppearance="@style/TextAppearance.BharatPickle.TitleLarge"
+        app:titleTextColor="@color/white"
+        app:titleTextAppearance="@style/TextAppearance.BharatPickle.TitleMedium"
         app:title="Add Address"/>
 
     <ScrollView
@@ -136,7 +137,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp"
-                android:textColor="@color/black"
                 android:text="Save"
                 app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.MediumComponent" />
 

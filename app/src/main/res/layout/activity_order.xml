@@ -13,6 +13,6 @@
         app:title="My Order"
         app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
         android:background="@color/yellow"
-        app:titleTextAppearance="@style/TextAppearance.BharatPickle.TitleLarge"/>
+        app:titleTextAppearance="@style/TextAppearance.BharatPickle.TitleMedium"/>
 
 </LinearLayout>

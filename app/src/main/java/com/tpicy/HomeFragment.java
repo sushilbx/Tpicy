@@ -72,6 +72,7 @@ public class HomeFragment extends Fragment {
         sessionManager = new SessionManager(getContext());
         recyclerView = view.findViewById(R.id.recyclerProductList);
 
+
        //recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
         getProduct();
