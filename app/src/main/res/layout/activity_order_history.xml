@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:id="@+id/history"
     android:orientation="vertical"
     tools:context=".OrderHistoryActivity">
     <com.google.android.material.appbar.MaterialToolbar
@@ -18,5 +19,9 @@
             android:id="@+id/rvOrderHistory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="jcgfcj"/>
 
 </LinearLayout>

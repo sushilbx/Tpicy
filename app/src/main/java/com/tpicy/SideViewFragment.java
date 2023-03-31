@@ -72,6 +72,13 @@ public class SideViewFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        b.tvSideMyOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), OrderHistoryActivity.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 
